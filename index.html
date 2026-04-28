@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hayvonlar Olami</title>
     <style>
         @import 'https://unpkg.com/open-props' layer(design.system);
         @import 'https://unpkg.com/open-props/normalize.light.min.css'
@@ -89,6 +89,79 @@
                 background-color: var(--surface-2);
                 padding-block: var(--size-fluid-5);
                 padding-inline: var(--size-5);
+            }
+
+            .site-header,
+            .site-footer {
+                max-inline-size: 975px;
+                margin-inline: auto;
+                
+                border-radius: var(--radios-custom);
+                padding: var(--size-5) var(--size-6);
+            }
+
+            .site-header {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                gap: var(--size-4);
+                margin-block-end: var(--size-6);
+            }
+
+            .site-logo,
+            .site-nav,
+            .site-cta,
+            .footer-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .site-logo {
+                font-size: var(--font-size-3);
+                font-weight: var(--font-weight-7);
+            }
+
+            .site-nav,
+            .footer-nav {
+                justify-content: center;
+                gap: var(--size-4);
+                flex-wrap: wrap;
+            }
+
+            .site-nav a,
+            .footer-nav a {
+                color: var(--text-1);
+                text-decoration: none;
+                font-weight: var(--font-weight-6);
+            }
+
+            .site-cta {
+                justify-content: flex-end;
+            }
+
+            .site-cta button {
+                border: 0;
+                border-radius: 999px;
+                background-color: var(--text-1);
+                color: white;
+                padding: 0.75rem 1.25rem;
+                font-weight: var(--font-weight-6);
+            }
+
+            .site-footer {
+                margin-block-start: var(--size-6);
+            }
+
+            .site-header p,
+            .site-footer p {
+                margin: 0;
+                color: var(--text-2);
+            }
+
+            @media (width >=768px) {
+                .site-header {
+                    grid-template-columns: 1fr auto 1fr;
+                }
             }
 
             .bento-section {
@@ -263,10 +336,21 @@
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="site-logo">Hayvonlar Olami</div>
+        <nav class="site-nav" aria-label="Asosiy navigatsiya">
+            <a href="#">Bosh sahifa</a>
+            <a href="#">Hikoyalar</a>
+            <a href="#">Aloqa</a>
+        </nav>
+        <div class="site-cta">
+            <button type="button">Ko'rish</button>
+        </div>
+    </header>
     <section class="bento-section">
         <div class="container">
             <header>
-                <h2>Latest Stories</h2>
+                <h2>So'nggi hikoyalar</h2>
             </header>
             <div class="bento-grid">
                 <a href="#" class="card hero">
@@ -276,13 +360,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/tiger.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/tiger.webp"
-                                alt="Cute cartoon tiger illustration" width="512" height="512" loading="lazy" />
+                                alt="Yoqimli yo'lbars rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h1>Embark on Roaring Adventures with A Tiger's Tale</h1>
-                        <small>January 8, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h1>Yo'lbars bilan shovqinli sarguzashtlarga yo'l oling</h1>
+                        <small>8-yanvar, 2024</small>
                     </div>
                 </a>
 
@@ -293,14 +377,14 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/crocodile.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/crocodile.webp"
-                                alt="Cartoon crocodile illustration" width="512" height="512" loading="lazy" />
+                                alt="Timsoh rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
+                        <small>ASOSIY HIKOYA</small>
 
-                        <h3>Chomping Chronicles: The Crocodile's Adventure</h3>
-                        <small>January 12, 2024</small>
+                        <h3>Tishli sarguzasht: timsohning hikoyasi</h3>
+                        <small>12-yanvar, 2024</small>
                     </div>
                 </a>
 
@@ -311,13 +395,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/macaw.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/macaw.webp"
-                                alt="Cartoon macaw illustration" width="512" height="512" loading="lazy" />
+                                alt="Ara to'tiqushi rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h3>Vibrant Wings: Journey of the Macaw</h3>
-                        <small>January 16, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h3>Rang-barang qanotlar: araning sayohati</h3>
+                        <small>16-yanvar, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -327,13 +411,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.webp"
-                                alt="Cartoon cow illustration" width="512" height="512" loading="lazy" />
+                                alt="Sigir rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h3>Moo-rific Tales: The Brave Cow's Journey</h3>
-                        <small>January 18, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h3>Jasur sigirning qiziqarli yo'li</h3>
+                        <small>18-yanvar, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -343,13 +427,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/dog.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/dog.webp"
-                                alt="Cartoon dog illustration" width="512" height="512" loading="lazy" />
+                                alt="It rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h3>Pawsome Quest: A Dog's Adventure</h3>
-                        <small>January 20, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h3>Sodiq itning ajoyib sarguzashti</h3>
+                        <small>20-yanvar, 2024</small>
                     </div>
                 </a>
 
@@ -360,13 +444,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/elephant.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/elephant.webp"
-                                alt="Cartoon elephant illustration" width="512" height="512" loading="lazy" />
+                                alt="Fil rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h4>Giant Hearts: An Elephant's Odyssey</h4>
-                        <small>January 24, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h4>Ulkan yurak: filning unutilmas odissiyasi</h4>
+                        <small>24-yanvar, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -376,13 +460,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/starfish.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/starfish.webp"
-                                alt="Cartoon starfish illustration" width="512" height="512" loading="lazy" />
+                                alt="Dengiz yulduzi rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h4>Explore Undersea Wonders with Starfish's Cosmic Journey</h4>
-                        <small>January 11, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h4>Dengiz yulduzi bilan suv osti mo''jizalarini kashf eting</h4>
+                        <small>11-yanvar, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -392,13 +476,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/horse.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/horse.webp"
-                                alt="Cartoon horse illustration" width="512" height="512" loading="lazy" />
+                                alt="Ot rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h4>Gallop and Giggles: The Whimsical Horse Chronicles</h4>
-                        <small>February 12, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h4>Yugurish va quvonch: ot haqidagi sho'x hikoyalar</h4>
+                        <small>12-fevral, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -408,13 +492,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/fox.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/fox.webp"
-                                alt="Cartoon fox illustration" alt="fox" width="512" height="512" loading="lazy" />
+                                alt="Tulki rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h4>Furry Fantasia: Fox's Enchanted Tale</h4>
-                        <small>February 16, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h4>Tulkining sehrli va qiziqarli ertagi</h4>
+                        <small>16-fevral, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -424,13 +508,13 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/snake.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/snake.webp"
-                                alt="Cartoon snake illustration" width="512" height="512" loading="lazy" />
+                                alt="Ilon rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h4>Slinky Serpent: A Snake's Mysterious Quest</h4>
-                        <small>February 20, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h4>Sirli izlanish: ilonning jim sarguzashti</h4>
+                        <small>20-fevral, 2024</small>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -440,18 +524,25 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cockatoo.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cockatoo.webp"
-                                alt="Cartoon cockatoo illustration" width="512" height="512" loading="lazy" />
+                                alt="Kakadu rasmi" width="512" height="512" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
-                        <small>FEATURED STORY</small>
-                        <h4>Feathered Friends: The Cockatoo's Symphony</h4>
-                        <small>February 24, 2024</small>
+                        <small>ASOSIY HIKOYA</small>
+                        <h4>Patli do'stlar: kakaduning yoqimli sadolari</h4>
+                        <small>24-fevral, 2024</small>
                     </div>
                 </a>
             </div>
         </div>
     </section>
+    <footer class="site-footer">
+        <nav class="footer-nav" aria-label="Pastki navigatsiya">
+            <a href="#">Bosh sahifa</a>
+            <a href="#">Hikoyalar</a>
+            <a href="#">Aloqa</a>
+        </nav>
+    </footer>
     <script>
         function addRevealEffect(elements) {
             const observer = new IntersectionObserver(

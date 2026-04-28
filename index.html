@@ -95,7 +95,7 @@
             .site-footer {
                 max-inline-size: 975px;
                 margin-inline: auto;
-                
+
                 border-radius: var(--radios-custom);
                 padding: var(--size-5) var(--size-6);
             }
@@ -224,12 +224,13 @@
                 overflow: clip;
 
                 .content {
-                    display: grid;
-                    place-items: center start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     gap: var(--size-2);
                     block-size: 100%;
                     padding: var(--size-6);
-                    grid-template-rows: auto 1fr auto;
+                    
                 }
 
                 &.hero {
@@ -332,6 +333,13 @@
                 }
             }
         }
+        .site-nav a:hover {
+            color: gold;
+        }
+        .footer-nav a:hover {
+            color: gold;
+        }
+        
     </style>
 </head>
 
@@ -360,7 +368,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/tiger.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/tiger.webp"
-                                alt="Yoqimli yo'lbars rasmi" width="512" height="512" loading="lazy" />
+                                alt="Yoqimli yo'lbars rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
@@ -377,7 +385,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/crocodile.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/crocodile.webp"
-                                alt="Timsoh rasmi" width="512" height="512" loading="lazy" />
+                                alt="Timsoh rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
@@ -395,7 +403,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/macaw.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/macaw.webp"
-                                alt="Ara to'tiqushi rasmi" width="512" height="512" loading="lazy" />
+                                alt="Ara to'tiqushi rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
@@ -406,69 +414,34 @@
                 </a>
                 <a href="#" class="card">
                     <div class="visual">
-                        <picture>
-                            <source srcset="
+
+                <picture>
+                    <source srcset="
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.avif
                   " type="image/avif" />
-                            <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.webp"
-                                alt="Sigir rasmi" width="512" height="512" loading="lazy" />
-                        </picture>
-                    </div>
-                    <div class="content">
-                        <small>ASOSIY HIKOYA</small>
-                        <h3>Jasur sigirning qiziqarli yo'li</h3>
-                        <small>18-yanvar, 2024</small>
-                    </div>
-                </a>
-                <a href="#" class="card">
-                    <div class="visual">
-                        <picture>
-                            <source srcset="
-                    https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/dog.avif
-                  " type="image/avif" />
-                            <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/dog.webp"
-                                alt="It rasmi" width="512" height="512" loading="lazy" />
-                        </picture>
-                    </div>
-                    <div class="content">
-                        <small>ASOSIY HIKOYA</small>
-                        <h3>Sodiq itning ajoyib sarguzashti</h3>
-                        <small>20-yanvar, 2024</small>
-                    </div>
-                </a>
+                    <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.webp"
+                        alt="Sigir rasmi" loading="lazy" />
+                </picture>
 
-                <a href="#" class="card">
-                    <div class="visual">
-                        <picture>
-                            <source srcset="
-                    https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/elephant.avif
-                  " type="image/avif" />
-                            <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/elephant.webp"
-                                alt="Fil rasmi" width="512" height="512" loading="lazy" />
-                        </picture>
+                       
                     </div>
                     <div class="content">
                         <small>ASOSIY HIKOYA</small>
-                        <h4>Ulkan yurak: filning unutilmas odissiyasi</h4>
-                        <small>24-yanvar, 2024</small>
+                        <h3>Jasur Sigir Sayohati: o'rmon uzra yo'l</h3>
+                        <small>16-yanvar, 2024</small>
                     </div>
                 </a>
-                <a href="#" class="card">
-                    <div class="visual">
-                        <picture>
-                            <source srcset="
-                    https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/starfish.avif
+                
+
+
+                <!-- <picture>
+                    <source srcset="
+                    https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.avif
                   " type="image/avif" />
-                            <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/starfish.webp"
-                                alt="Dengiz yulduzi rasmi" width="512" height="512" loading="lazy" />
-                        </picture>
-                    </div>
-                    <div class="content">
-                        <small>ASOSIY HIKOYA</small>
-                        <h4>Dengiz yulduzi bilan suv osti mo''jizalarini kashf eting</h4>
-                        <small>11-yanvar, 2024</small>
-                    </div>
-                </a>
+                    <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.webp"
+                        alt="Sigir rasmi" loading="lazy" />
+                </picture> -->
+
                 <a href="#" class="card">
                     <div class="visual">
                         <picture>
@@ -476,7 +449,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/horse.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/horse.webp"
-                                alt="Ot rasmi" width="512" height="512" loading="lazy" />
+                                alt="Ot rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
@@ -492,7 +465,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/fox.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/fox.webp"
-                                alt="Tulki rasmi" width="512" height="512" loading="lazy" />
+                                alt="Tulki rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
@@ -508,7 +481,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/snake.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/snake.webp"
-                                alt="Ilon rasmi" width="512" height="512" loading="lazy" />
+                                alt="Ilon rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">
@@ -524,7 +497,7 @@
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cockatoo.avif
                   " type="image/avif" />
                             <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cockatoo.webp"
-                                alt="Kakadu rasmi" width="512" height="512" loading="lazy" />
+                                alt="Kakadu rasmi" loading="lazy" />
                         </picture>
                     </div>
                     <div class="content">

@@ -230,7 +230,7 @@
                     gap: var(--size-2);
                     block-size: 100%;
                     padding: var(--size-6);
-                    
+
                 }
 
                 &.hero {
@@ -333,13 +333,14 @@
                 }
             }
         }
+
         .site-nav a:hover {
             color: gold;
         }
+
         .footer-nav a:hover {
             color: gold;
         }
-        
     </style>
 </head>
 
@@ -357,9 +358,7 @@
     </header>
     <section class="bento-section">
         <div class="container">
-            <header>
-                <h2>So'nggi hikoyalar</h2>
-            </header>
+
             <div class="bento-grid">
                 <a href="#" class="card hero">
                     <div class="visual">
@@ -415,15 +414,15 @@
                 <a href="#" class="card">
                     <div class="visual">
 
-                <picture>
-                    <source srcset="
+                        <picture>
+                            <source srcset="
                     https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.avif
                   " type="image/avif" />
-                    <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.webp"
-                        alt="Sigir rasmi" loading="lazy" />
-                </picture>
+                            <img src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/bento-grid/images/cow.webp"
+                                alt="Sigir rasmi" loading="lazy" />
+                        </picture>
 
-                       
+
                     </div>
                     <div class="content">
                         <small>ASOSIY HIKOYA</small>
@@ -431,7 +430,7 @@
                         <small>16-yanvar, 2024</small>
                     </div>
                 </a>
-                
+
 
 
                 <!-- <picture>
@@ -516,6 +515,20 @@
             <a href="#">Aloqa</a>
         </nav>
     </footer>
+
+    <aside style="width: 600px; background-color: black; color: white;">
+
+        @import 'https://unpkg.com/open-props' layer(design.system);
+        @import 'https://unpkg.com/open-props/normalize.light.min.css'
+        layer(base.normalize);
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..700&display=swap');
+        <br><br>
+
+        font-family: 'Inter'; <br>
+        background-color: rgb(244, 244, 246);
+
+    </aside>
     <script>
         function addRevealEffect(elements) {
             const observer = new IntersectionObserver(

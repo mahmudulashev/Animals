@@ -17,10 +17,13 @@
                 font-family: 'Inter', sans-serif;
 
                 --surface-1: white;
-                --surface-2: hsl(240, 11%, 96%);
-                --text-1: hsl(240, 3%, 12%);
-                --text-2: hsl(240, 2%, 44%);
-                --radios-custom: 14px;
+                --surface-2: #f7f1e8;
+                --surface-3: #fffaf4;
+                --text-1: #1f1d1a;
+                --text-2: #6f685f;
+                --accent: #c98b2e;
+                --accent-soft: #f4e4c3;
+                --radios-custom: 18px;
                 --font-size-head-custom: 1.125rem;
             }
 
@@ -86,18 +89,24 @@
 
         @layer base.app {
             body {
-                background-color: var(--surface-2);
+                background:
+                    radial-gradient(circle at top, #fff8ef 0%, transparent 35%),
+                    linear-gradient(180deg, #f9f4ec 0%, #f3ede3 100%);
                 padding-block: var(--size-fluid-5);
                 padding-inline: var(--size-5);
+                color: var(--text-1);
             }
 
             .site-header,
             .site-footer {
                 max-inline-size: 975px;
                 margin-inline: auto;
-
+                background-color: rgba(255, 250, 244, 0.88);
+                border: 1px solid rgba(201, 139, 46, 0.12);
                 border-radius: var(--radios-custom);
                 padding: var(--size-5) var(--size-6);
+                box-shadow: 0 14px 32px rgba(74, 54, 24, 0.08);
+                backdrop-filter: blur(8px);
             }
 
             .site-header {
@@ -119,6 +128,7 @@
             .site-logo {
                 font-size: var(--font-size-3);
                 font-weight: var(--font-weight-7);
+                letter-spacing: 0;
             }
 
             .site-nav,
@@ -133,6 +143,9 @@
                 color: var(--text-1);
                 text-decoration: none;
                 font-weight: var(--font-weight-6);
+                padding-block: 0.35rem;
+                border-bottom: 2px solid transparent;
+                transition: color 0.2s ease, border-color 0.2s ease;
             }
 
             .site-cta {
@@ -142,10 +155,12 @@
             .site-cta button {
                 border: 0;
                 border-radius: 999px;
-                background-color: var(--text-1);
+                background-color: var(--accent);
                 color: white;
                 padding: 0.75rem 1.25rem;
                 font-weight: var(--font-weight-6);
+                box-shadow: 0 10px 20px rgba(201, 139, 46, 0.22);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
             }
 
             .site-footer {
@@ -169,7 +184,7 @@
                 place-items: center;
 
                 header {
-                    padding-block: var(--size-3);
+                    padding-block: var(--size-3) var(--size-5);
                 }
             }
 
@@ -185,6 +200,16 @@
                 @media (width >=1024px) {
                     max-inline-size: 975px;
                 }
+            }
+
+            .section-heading {
+                text-align: center;
+            }
+
+            .section-heading p {
+                margin: 0 0 0.5rem;
+                color: var(--text-2);
+                font-size: 0.95rem;
             }
         }
 
@@ -222,6 +247,9 @@
                 border-radius: var(--radios-custom);
                 min-block-size: var(--card-min-block-size);
                 overflow: clip;
+                border: 1px solid rgba(201, 139, 46, 0.1);
+                box-shadow: 0 18px 34px rgba(63, 45, 20, 0.08);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
 
                 .content {
                     display: flex;
@@ -248,7 +276,7 @@
 
                         img {
                             block-size: 100cqb;
-                            background-color: white;
+                            background: linear-gradient(180deg, #fffdf9 0%, #f7efe1 100%);
                             object-fit: contain;
                         }
                     }
@@ -296,6 +324,11 @@
                         transition: scale 0.4s ease;
                     }
 
+                    &:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0 22px 42px rgba(63, 45, 20, 0.12);
+                    }
+
                     &:hover img {
                         scale: 1.03;
                     }
@@ -335,11 +368,18 @@
         }
 
         .site-nav a:hover {
-            color: gold;
+            color: var(--accent);
+            border-color: var(--accent);
         }
 
         .footer-nav a:hover {
-            color: gold;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .site-cta button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 24px rgba(201, 139, 46, 0.28);
         }
     </style>
 </head>
@@ -505,8 +545,7 @@
             <a href="#">Aloqa</a>
         </nav>
     </footer>
-
-    <aside style="width: 600px; background-color: black; color: white;">
+    <aside style="width: 600px; background-color: black; color: white; margin-top: 200px;">
 
         @import 'https://unpkg.com/open-props' layer(design.system);
         @import 'https://unpkg.com/open-props/normalize.light.min.css'
@@ -516,7 +555,7 @@
         <br><br>
 
         font-family: 'Inter'; <br>
-        background-color: rgb(244, 244, 246);
+        background: radial-gradient(circle at top, #fff8ef 0%, transparent 35%), linear-gradient(180deg, #f9f4ec 0%, #f3ede3 100%);
 
     </aside>
     <script>
